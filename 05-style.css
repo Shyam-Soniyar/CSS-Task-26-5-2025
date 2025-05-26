@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  background-color: rgb(235, 164, 164);
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.childcont {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+}
+.box1 {
+  background-color: rgb(129, 80, 80);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box2 {
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.box3 {
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.box1-1 {
+  background-color: rgb(237, 229, 229);
+  height: 50%;
+  width: 70%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 30px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.part1 {
+  /* background-color: rgb(237, 229, 229); */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+.part2 {
+  /* background-color: rgb(125, 34, 34); */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 30px ;
+  /* align-items: center;
+  justify-content: center; */
+}
+.bd1,
+.bd2,
+.bd3,
+.bd4 {
+  background-color: rgb(230, 87, 111);
+  height: 100%;
+  width: 100%;
+}
+.box2-1 {
+  background-color: rgb(186, 69, 69);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box2-2 {
+  background-color: rgb(104, 25, 25);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box2-1-1,
+.box2-2-1,
+.box3-1-1,
+.box3-2-1 {
+  background-color: rgb(195, 123, 123);
+  height: 25%;
+  width: 20%;
+  display: flex;
+}
+.box3-1 {
+  background-color: rgb(104, 25, 25);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box3-2 {
+  background-color: rgb(186, 69, 69);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
