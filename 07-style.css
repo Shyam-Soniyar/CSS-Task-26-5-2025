@@ -402,3 +402,106 @@
     font-size: 2.8rem;
     color: salmon;
 }
+
+
+@media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+      align-items: stretch;
+    }
+  
+    .box1,
+    .box2,
+    .box3 {
+      width: 100%;
+      height: auto;
+    }
+  
+    .profile img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .alice {
+      font-size: 2.5rem;
+    }
+  
+    .details h1,
+    .profe-head h1,
+    .psyc h1,
+    .usergoal h1,
+    .scenario h1,
+    .tools h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .alice {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .ux {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .details h1,
+  .profe-head h1,
+  .psyc h1,
+  .usergoal h1,
+  .scenario h1,
+  .tools h1 {
+    font-size: 1.2rem;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+  }
+
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  .progress-labels {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .progress-label {
+    width: auto;
+    text-align: left;
+  }
+
+  .box2,
+  .box3 {
+    gap: 20px;
+  }
+}
