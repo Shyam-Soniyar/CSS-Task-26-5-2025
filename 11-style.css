@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(196, 193, 193, 0.415);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 50px 80px;
+    position: relative;
+}
+.box1{
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 20px;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.24) 8px 8px 12px;
+    overflow: hidden;
+}
+.background{
+    width: 100%;
+    height: 30%;
+    background-image: url(./anime-mountain-landscape-sunrise-scenery-4K-uhdpaper.com-96.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: end;
+}
+.background i{
+    color: black;
+    border-radius: 50%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actualcontent{
+    width: 100%;
+    height: 70%;
+}
+.first{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    padding: 30px;
+    gap: 15px;
+}
+.profile h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.profile .sp1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(106, 102, 102, 0.794);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.profession{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    height: 25%;
+}
+.editSetting{
+    display: flex;
+    height: 25%;
+    gap: 20px;
+}
+.editSetting .ed1{
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.editSetting .ed2{
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid black;
+}
+.bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    /* background-color: antiquewhite; */
+
+}
+.empty{
+    height: 90px;
+}
+.profile img{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 18%;
+    left: 2%;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+
+/*              */
+.jobdetails{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.currentrole{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+    height: 50%;
+    width: 100%;
+}
+.currentrole1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(38, 37, 37, 0.559);
+    display: flex;
+    gap: 10px;
+}
+.software{
+    display: flex;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(38, 37, 37, 0.089);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+    height: 50%;
+    width: 100%;
+}
+.lists{
+    display: flex;
+    gap: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.lists span{
+    background-color: rgba(255, 228, 196, 0.545);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.second{
+    display: flex;
+    gap: 20px;
+    height: 40%;
+    width: 100%;
+    padding: 20px 30px;
+}
+.card{
+    height: 100%;
+    width: 33.33%;
+    background-color: rgba(17, 204, 233, 0.063);
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+    height: 100%;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    gap: 10px;
+    height: 100%;
+}
+.arrowicon{
+    border-radius: 50%;
+    border: 2px solid rgb(29, 226, 229);
+    /* color: rgb(2, 5, 5); */
+    padding: 10px;
+}
+.arrowicon i{
+    color: rgb(29, 226, 229);
+    font-size: 1.5rem;
+}
+.upper h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.lower p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.414);
+}
+@media (max-width:1024px){
+    .container{
+        padding: 40px;
+    }
+    .upper h1{
+        font-size: 1.2rem;
+    }
+    .lower p{
+        font-size: 0.8rem;
+    }
+    .arrowicon i{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width:768px){
+    .container{
+        overflow: visible !important;
+    }
+    .first{
+        height: 100%;
+    }
+    .editSetting{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 20px;
+        height: 100%;
+    }
+    .lists{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        height: 100%;
+    }
+    .box2{
+        overflow: scroll !important;
+    }
+    .box2::-webkit-scrollbar {
+        display: none;
+      }
+}
