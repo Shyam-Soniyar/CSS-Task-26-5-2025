@@ -7,3 +7,7 @@ img_mountains.jpg
 back.jpg
 coffe.jpg
 images.jpg
+node_modules
+.vscode
+package-lock.json
+package.json

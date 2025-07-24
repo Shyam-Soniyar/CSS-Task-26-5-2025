@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@layer utilities {
+  .shadow-right-sky {
+    box-shadow: 40px 10px 1px -5px rgb(102, 209, 255); /* sky-400 */
+  }
+  @media (max-width: 1500px) {
+    .shadow-right-sky {
+      box-shadow: 20px 10px 1px -5px rgb(102, 209, 255); /* sky-400 */
+    }
+  }
+  @media (min-width: 1023px) {
+    .width-incr {
+      padding-top: 100px;
+    }
+  }
+  @media (max-width: 376px) {
+    .map-btn {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

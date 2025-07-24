@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" id="root" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <script src="practise.js" defer></script>
+  </head>
+  <body class="yellow-mode:bg-yellow-300 dark:bg-gray-800 pink-mode:bg-pink-700">
+    <nav class="mr-10 flex justify-end gap-5 dark:bg-gray-800">
+      <div class="w-100vw h-20 flex items-center justify-end gap-5">
+        <label
+          for="checkbox"
+          class="h-2 relative flex items-center cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            id="checkbox"
+            class="sr-only peer"
+            onclick="themeChange()"
+          />
+          <div
+            class="h-10 w-16 bg-amber-300 rounded-full relative peer-checked:bg-green-300 transform duration-300"
+          ></div>
+          <div
+            class="h-6 w-6 bg-white rounded-full absolute top-0.2 left-1.5 transform duration-300 peer-checked:translate-x-7"
+          ></div>
+        </label>
+        <p id="theme" class="text-2xl font-medium dark:text-white">Dark Mode</p>
+      </div>
+      <div class="w-100vw h-20 flex items-center justify-end gap-5">
+        <label
+          for="checkbox2"
+          class="h-2 relative flex items-center cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            id="checkbox2"
+            class="sr-only peer"
+            onclick="themeChange2()"
+          />
+          <div
+            class="h-10 w-16 bg-amber-300 rounded-full relative peer-checked:bg-green-300 transform duration-300"
+          ></div>
+          <div
+            class="h-6 w-6 bg-white rounded-full absolute top-0.2 left-1.5 transform duration-300 peer-checked:translate-x-7"
+          ></div>
+        </label>
+        <p id="theme2" class="text-2xl font-medium dark:text-white">
+          Pink Mode
+        </p>
+      </div>
+      <div class="w-100vw h-20 flex items-center justify-end gap-5">
+        <label
+          for="checkbox3"
+          class="h-2 relative flex items-center cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            id="checkbox3"
+            class="sr-only peer"
+            onclick="themeChange3()"
+          />
+          <div
+            class="h-10 w-16 bg-amber-300 rounded-full relative peer-checked:bg-green-300 transform duration-300"
+          ></div>
+          <div
+            class="h-6 w-6 bg-white rounded-full absolute top-0.2 left-1.5 transform duration-300 peer-checked:translate-x-7"
+          ></div>
+        </label>
+        <p id="theme3" class="text-2xl font-medium dark:text-white">
+          Yellow Mode
+        </p>
+      </div>
+    </nav>
+
+    <section class="p-10 dark:bg-gray-800 pink-mode:bg-pink-700">
+      <article class="flex flex-col gap-10">
+        <h1 class="text-5xl font-black italic dark:text-white">
+          The Principles of Good Design
+        </h1>
+        <p class="text-3xl font-thin italic dark:text-white">
+          Circa 2014 <span>by</span> Ian Daniel Stewart
+        </p>
+
+        <p class="text-2xl font-light dark:text-white">
+          Is <strong>beauty</strong> objectively true? Are there principles you
+          can use to guide you to it in your work? Can designers from both the
+          sciences and the arts look at each others work and find
+          <strong>beauty</strong>? These are important questions for all
+          designers.
+        </p>
+
+        <p class="text-2xl font-light dark:text-white">
+          For those of us who design things … we need to be able to recognize
+          it. We need good taste to make good things. Instead of treating
+          <strong>beauty</strong> as an airy abstraction, to be either blathered
+          about or avoided depending on how one feels about airy abstractions,
+          let’s try considering it as a practical question: how do you make good
+          stuff?
+        </p>
+        <a href="#" class="text-blue-500 font-extralight">Read More</a>
+      </article>
+    </section>
+  </body>
+</html>

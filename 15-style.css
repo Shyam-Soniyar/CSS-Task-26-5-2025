@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant pink-mode {
+  &:where(.pink-mode, .pink-mode *) {
+  }
+}
+@custom-variant yellow-mode {
+  &:where(.yellow-mode, .yellow-mode *) {
+  }
+}

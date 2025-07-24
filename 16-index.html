@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" id="root" class="scroll-smooth  w-[100%]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Web Page</title>
+    <link rel="stylesheet" href="16-output.css" />
+    <script src="16-script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
+    <style>
+      /* Hide scrollbar for Chrome, Safari and Edge */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+    </style>
+
+  </head>
+  <body class="dark:bg-gray-800">
+    <div class="h-screen dark:bg-gray-800 relative">
+      <div id="menu-toggle" class=" absolute top-[11%] left-[0%] w-[100%] h-[100%] bg-gray-100 hidden dark:bg-gray-800 z-30">
+
+        <div class="flex flex-col items-center gap-8 text-xl font-medium dark:text-white">
+          <div>Home</div>
+        <div>Request car</div>
+        <div>Our Locations</div>
+        <div>How it works</div>
+        <div>
+          <select name="noname" id="Select">
+            <option value="english">English</option>
+            <option value="english">English</option>
+            <option value="english">English</option>
+          </select>
+        </div>
+        <div class="flex flex-col items-center">
+          <div>Contact</div>
+          <div>M-F:08:30-17:30</div>
+        </div>
+        <div class=" flex items-center gap-2">
+          <i class="fa-brands fa-phone-volume"></i>
+          <span>0374023333</span>
+        </div>
+        <div>
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>0733909999</span>
+        </div>
+        </div>
+      </div>
+
+      <div id="car-request" class="absolute hidden h-[100%] w-[100%] top-0 left-0 bg-black/30 z-40   items-center justify-center max-lg:h-[1550px] max-lg:overflow-visible">
+          <div class="h-[90%] w-[70%] bg-white dark:bg-gray-800 opacity-100 z-50 rounded-4xl  flex max-xl:w-[90%] max-lg:flex-col max-lg:w-[90%] max-lg:h-[100%] max-sm:gap-[20px]">
+              <div class="flex justify-end p-[20px] ">
+                <i class="fa-solid fa-xmark text-2xl dark:text-white cursor-pointer"
+                onclick="requestCar()"></i>
+              </div>
+              <div class="w-[50%] h-[100%] p-[80px] max-xl:p-[20px] max-lg:w-[100%] max-lg:p-[20px] overflow-y-auto hide-scrollbar max-sm:overflow-visible ">
+                <div class="flex flex-col gap-[10px] items-center">
+                  <div class="text-4xl font-medium dark:text-white max-lg:mt-[20px] max-sm:text-2xl">Car Replacement Request</div>
+                  <div class="text-lg text-gray-500 flex flex-col items-center dark:text-white max-sm:text-sm">
+                    <div>Complete the form to receive your replacement car.</div>
+                    <div> Fields marked with * are mandatory.</div>
+                  </div>
+                </div>
+                <form action="" class="flex flex-col gap-[10px]">
+                  <input class="px-[20px] border-[1px] border-gray-400 rounded-full py-[15px] max-sm:py-[8px] dark:text-white" type="text" placeholder="Full Name*" required>
+
+                  <div class="flex flex-col border-[1px] border-gray-400 rounded-full px-[20px] py-[8px] dark:text-white max-sm:py-[4px]">
+                    <label for="email" class="text-gray-500">Email Address*</label>
+                    <input type="email" placeholder="ex. exemplu@domeniu.com
+                    " required id="email" class="font-bold">
+                    </label>
+                  </div>
+
+                  <input id="phone" type="tel" class="w-full border rounded-full px-4 py-[15px] dark:text-white" />
+
+                  <div class="flex flex-col border-[1px] border-gray-400 rounded-full px-[20px] py-[8px] dark:text-white">
+                    <label for="email" class="text-gray-500">Pick-up location:*</label>
+                    <input type="email" placeholder="Please select a Pick-up location
+                    " required id="email" class="font-bold">
+                    </label>
+                  </div>
+
+                  <div class="flex flex-col border-[1px] border-gray-400 rounded-full px-[20px] py-[8px] dark:text-white">
+                    <label for="email" class="text-gray-500">Your License Plate Number*</label>
+                    <input type="email" placeholder="ex. B-123-AAA
+                    " required id="email" class="font-bold">
+                    </label>
+                  </div>
+
+                  <div class="flex flex-col border-[1px] border-gray-400 rounded-full px-[20px] py-[8px] dark:text-white">
+                    <label for="email" class="text-gray-500">Your Car Model:*</label>
+                    <input type="email" placeholder="ex. Skoda Skala
+                    " required id="email" class="font-bold">
+                    </label>
+                  </div>
+
+                  <div class="flex flex-col border-[1px] border-gray-400 rounded-full px-[20px] py-[8px] dark:text-white">
+                    <label for="email" class="text-gray-500">Guilty Party's Insurer:*</label>
+                    <input type="email" placeholder="Allianz
+                    " required id="email" class="font-bold">
+                    </label>
+                  </div>
+
+                  <div class="flex flex-col gap-[20px] dark:text-white">
+                    <div>Information</div>
+                    <textarea
+                    class="w-full h-[100px] p-4 border border-gray-300 rounded-full resize-none"
+                    placeholder="Type your message here..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <input class="dark:text-white" type="checkbox">
+                    <span class="text-gray-500 text-sm dark:text-white">*I agree that Klass Wagen SRL may use my personal data mentioned above to provide the necessary support for my request submitted through this form. For more details on the processing of your personal data, please read our <span class="text-sky-600">Privacy Policy</span>.</span>
+                  </div>
+
+                  <div>
+                    <input class="dark:text-white" type="checkbox">
+                    <span class="text-gray-500 text-sm dark:text-white">I agree to receive offers and news from <span class="text-sky-600">klasswagen.com/inlocuiremasina</span> by Klass Wagen.</span>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <span class="bg-blue-500 text-white rounded-full py-[15px] w-[60%] flex justify-center text-xl font-medium">Send Request</span>
+                  </div>
+
+                </form>
+              </div>
+              <div class="w-[50%] h-[60%] p-[80px] max-sm:p-[20px] flex max-lg:w-[100%] max-lg:h-[30%] max-lg:p-[40px]">
+
+
+
+                <div class="w-full max-w-md mx-auto p-4 bg-gray-50 rounded-2xl shadow-md text-center">
+                  <h2 class="text-2xl font-bold">Our Cars</h2>
+                  <p class="text-gray-500">We renew our fleet every year!</p>
+                
+                  <div class="relative mt-4">
+                    <!-- Left Arrow -->
+                    <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 text-xl z-10 px-2">
+                      &#10094;
+                    </button>
+                
+                    <!-- Carousel Items -->
+                    <div id="carousel" class="overflow-hidden">
+                      <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Each item -->
+                        <div class="w-full flex-shrink-0">
+                          <img src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/bc1ae077-1932-4db8-b25e-72812a0756f0-fabiastanga.jpg" class="mx-auto w-60" />
+                          <p class="mt-2 font-semibold">Skoda Fabia</p>
+                        </div>
+                        <div class="w-full flex-shrink-0">
+                          <img src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/bc1ae077-1932-4db8-b25e-72812a0756f0-fabiastanga.jpg" class="mx-auto w-60" />
+                          <p class="mt-2 font-semibold">VW Tiguan</p>
+                        </div>
+                        <div class="w-full flex-shrink-0">
+                          <img src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/bc1ae077-1932-4db8-b25e-72812a0756f0-fabiastanga.jpg" class="mx-auto w-60" />
+                          <p class="mt-2 font-semibold">Ford Transit</p>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Right Arrow -->
+                    <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 text-xl z-10 px-2">
+                      &#10095;
+                    </button>
+                  </div>
+                </div>
+                
+
+
+
+              </div>
+          </div>
+      </div>
+
+      <section id="header">
+        <nav
+          class="w-full sm:h-1/9 h-[200px] bg-gray-100 dark:bg-gray-800 dark:text-white flex items-center lg:justify-around justify-between px-0 fixed top-0 left-0 z-10 max-sm:h-[100px] max-lg:px-[10px]"
+        >
+          <div>
+            <img
+              class="h-20 w-full"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/2048px-Soccerball.svg.png"
+              alt=""
+            />
+          </div>
+
+          <div class="">
+            <ul class="hidden lg:flex xl:gap-20 gap-8">
+              <li>
+                <a href="#" class="xl:text-lg font-medium">Home</a>
+              </li>
+
+              <li>
+                <a
+                  
+                  class="xl:text-lg font-medium text-gray-500 hover:text-black dark:text-white dark:hover:text-orange-300"
+                  onclick="requestCar()"
+                  >Request car
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-lg font-medium text-gray-500 hover:text-black
+                  dark:text-white dark:hover:text-orange-300"
+                  >Our Locations
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-lg font-medium text-gray-500 hover:text-black
+                  dark:text-white dark:hover:text-orange-300"
+                  >How It Works</a
+                >
+              </li>
+              <li class="relative select-none">
+                <div>
+                  <div
+                    class="xl:text-lg font-medium text-gray-500 hover:text-black cursor-pointer flex items-center gap-2 select-none
+                    dark:text-white dark:hover:text-orange-300"
+                    onclick="toggleDropdown()"
+                  >
+                    English
+                    <img
+                      class="h-2 w-2 dark:text-orange-300"
+                      src="https://www.svgrepo.com/show/509905/dropdown-arrow.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    id="dropdown-menu"
+                    class="absolute top-5 rounded-2xl bg-white dark:bg-orange-300 shadow mt-2 hidden overflow-hidden"
+                  >
+                    <div class="py-2 px-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-orange-400">
+                      Hindi
+                    </div>
+                    <div class="py-2 px-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-orange-400">
+                      German
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden lg:flex flex-col items-center dark:text-orange-200">
+            <div class="font-medium text-base xl:text-lg">
+              Contact: M-F: 08:30-17:30
+            </div>
+            <div class="flex items-center gap-2">
+              <i
+                class="fa-solid fa-phone-volume font-medium xl:text-lg text-sm"
+              ></i>
+              <span class="font-medium xl:text-lg border-b text-sm"
+                >0374023333</span
+              >
+              <span class="font-medium xl:text-lg text-sm">/</span>
+              <i
+                class="fa-brands fa-whatsapp font-medium xl:text-lg text-sm"
+              ></i>
+              <span class="font-medium xl:text-lg border-b text-sm"
+                >0733909999</span
+              >
+            </div>
+          </div>
+
+          <div class="flex items-center gap-[20px]">
+            <div class="lg:hidden">
+              <button type="button" onclick="menubarToggle(event)">
+                <i id="icon-menu" class="fa-solid fa-bars text-2xl"></i>
+              </button>
+            </div>
+            
+          
+            <div class="w-100vw h-20 flex items-center justify-end gap-5">
+              <label
+                for="checkbox"
+                class="h-2 relative flex items-center cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  class="sr-only peer"
+                  onclick="themeChange()"
+                />
+                <div
+                  class="h-10 w-16 bg-amber-300 rounded-full relative peer-checked:bg-green-300 transform duration-300"
+                ></div>
+                <div
+                  class="h-6 w-6 bg-white rounded-full absolute top-0.2 left-1.5 transform duration-300 peer-checked:translate-x-7"
+                >
+                <i id="dark-light-icon" class="fa-solid fa-sun absolute z-50 top-1 left-1 text-black"></i>
+              </div>
+              </label>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section id="header1">
+        <div
+          class="w-[100%] width-incr h-1/2 sm:h-[0%] flex sm:flex-row bg-gray-100 md:px-20 2xl:px-60 sm:pt-30 lg:pt-15 xl:pt-30 dark:bg-gray-800 dark:text-white flex-col max-sm:bg-[url('https://bsmedia.business-standard.com/_media/bs/img/article/2024-07/13/full/1720844888-869.jpg')] bg-cover bg-center max-sm:pt-[120px] max-sm:rounded-4xl max-lg:px-[0px] max-sm:p-5 max-lg:pb-[20px] "
+        >
+          <div class="sm:w-1/2 p-10 flex flex-col gap-8 max-lg:p-[0]">
+            <div class="font-medium text-5xl max-sm:text-white max-lg:text-3xl max-xl:text-[45px]">
+              Had an accident?
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-col gap-1">
+                <div class="text-2xl font-medium max-sm:text-white max-lg:text-xl">
+                  Not your fault? Don't worry!
+                </div>
+                <span
+                  class="text-2xl font-medium text-gray-500 max-sm:text-white max-lg:text-xl dark:text-orange-200"
+                  >Get a replacement car, for free, during repairs.</span
+                >
+              </div>
+              <div class="text-2xl font-medium max-sm:text-white max-lg:text-xl">
+                Your car takes a break, but you continue your <br />
+                journey safely.
+              </div>
+            </div>
+            <div>
+              <button
+                class="bg-blue-500 text-white text-2xl font-normal px-20 py-3 rounded-full cursor-pointer hover:bg-blue-400 w-full max-lg:w-fit max-lg:px-[10px] max-sm:px-[20px] max-sm:w-full max-lg:flex max-lg:items-center max-lg:text-xl max-sm:flex max-sm:justify-center"
+                onclick="requestCar()"
+              >
+                Request car
+              </button>
+            </div>
+          </div>
+          <div class="sm:w-1/2  2xl:p-15 max-lg:p-0 max-lg:flex max-lg:items-center">
+            <img
+              class="object-cover max-sm:hidden h-full w-full rounded-4xl  max-lg:p-0"
+              src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-07/13/full/1720844888-869.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section id="section2">
+        <div
+          class="w-full h-1/2 flex flex-col gap-12 items-center bg-white pt-20 xl:px-30 px-10 2xl:px-90 dark:bg-gray-800 dark:text-white"
+        >
+          <div class="font-medium text-5xl max-lg:text-4xl">Leave it all to us!</div>
+          <div class="flex gap-20 flex-col  md:flex-row">
+            <div class="flex flex-col items-center gap-3 w-1/3 max-sm:w-full  ">
+              <div>
+                <img
+                  src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9%2Cfr%3Bq%3D0.8%2Cpt%3Bq%3D0.7/home/a7e00ac4-6cf5-459f-8422-05c5c6a6ea1f-free.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div class="font-medium text-xl">FREE</div>
+                <div class="text-center font-medium text-xl text-gray-400 max-lg:text-lg dark:text-orange-200">
+                  All costs are covered by the at-fault driver's insurance.
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center gap-3 w-1/3 max-sm:w-full ">
+              <div>
+                <img
+                  src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9%2Cfr%3Bq%3D0.8%2Cpt%3Bq%3D0.7/home/5d49025c-97f0-43fa-b46d-7331f217fcc7-unlimited.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div class="font-medium text-xl">FĂRĂ LIMITE</div>
+                <div class="text-center font-medium text-xl text-gray-400 max-lg:text-lg dark:text-orange-200">
+                  Poți folosi mașina de schimb pe tot teritoriul României, fără
+                  nicio restricție de kilometri.
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center gap-3 w-1/3 max-sm:w-full ">
+              <div>
+                <img
+                  src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/home/7119e95b-1265-44bb-8896-6109cb04b1f8-access1.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div class="font-medium text-xl">RAPID</div>
+                <div class="text-center font-medium text-xl text-gray-400 max-lg:text-lg dark:text-orange-200">
+                  Fără timp pierdut – preluare rapidă a mașinii și suport
+                  dedicat, 24/7.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section3">
+        <div
+          class="sm:flex w-full gap-10 2xl:px-80 xl:px-30 px-10 pt-40 pb-20 dark:bg-gray-800 dark:text-white"
+        >
+          <div class="sm:w-1/2 flex flex-col gap-10">
+            <div class="font-medium xl:text-5xl text-4xl">
+              Replacement car in 3 easy steps
+            </div>
+            <div class="flex flex-col gap-6">
+              <div class="flex flex-col gap-2">
+                <div class="font-medium xl:text-2xl text-xl">
+                  1. Apply online or contact us directly
+                </div>
+                <div class="text-gray-700 dark:text-orange-200">
+                  Ne poți suna la 0374 023 333 sau poți completa formularul de
+                  contact disponibil mai sus, iar unul dintre consultanții
+                  noștri te va contacta în cel mai scurt timp.
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="font-medium xl:text-2xl text-xl">
+                  2. Procesăm și validăm solicitarea ta.
+                </div>
+                <div class="text-gray-700 dark:text-orange-200">
+                  Procesarea și validarea se fac rapid, de obicei în câteva
+                  minute, pentru cele mai simple cazuri.
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="font-medium xl:text-2xl text-xl">
+                  3. Ridici mașina.
+                </div>
+                <div class="text-gray-700 dark:text-orange-200">
+                  După validarea solicitării, te prezinți la sediul ales cu
+                  documentele necesare și ridici gratuit mașina de schimb.
+                </div>
+              </div>
+              <div class="text-gray-700 dark:text-orange-200">
+                Beneficiezi de o mașină de înlocuire pe toată durata
+                reparațiilor, fără costuri, printr-un proces rapid și
+                transparent.
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-1/2">
+            <img
+              class="h-[100%] w-[100%] object-contain"
+              src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9%2Cfr%3Bq%3D0.8%2Cpt%3Bq%3D0.7/home/cc53037a-1a85-4be6-9a23-e294f8fcddf2-AdobeStock.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="section4" class="py-12 relative flex flex-col items-center hide-scrollbar">
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold mb-2 dark:text-white">Our Cars</h2>
+          <p class="text-gray-600 dark:text-orange-200">
+            Fleet renewed annually with the latest and safest models
+          </p>
+        </div>
+
+        <!-- Scrollable car list container -->
+        <div class="relative max-w-[60%] over  hide-scrollbar">
+          <!-- Left Arrow -->
+          <button
+            id="scrollLeft"
+            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white  shadow-md p-2 rounded-full z-10"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- Car Items -->
+          <div
+            id="carSlider"
+            class="flex overflow-x-auto space-x-8 px-6 scroll-smooth snap-x snap-mandatory"
+          >
+            <!-- Car 1 -->
+            <div class="flex-shrink-0 w-[250px] text-center snap-center">
+              <img
+                src="https://www.visitmorocco.com/sites/default/files/thumbnails/image/vm-worldcup-qatar-football-morocco-badr-banoun_1.png"
+                alt="Opel Astra"
+                class="mx-auto mb-4"
+              />
+              <p class="font-medium dark:text-orange-200">Opel Astra</p>
+            </div>
+            <!-- Car 2 -->
+            <div class="flex-shrink-0 w-[250px] text-center snap-center">
+              <img
+                src="https://www.visitmorocco.com/sites/default/files/thumbnails/image/vm-worldcup-qatar-football-morocco-badr-banoun_1.png"
+                alt="Ford Transit"
+                class="mx-auto mb-4"
+              />
+              <p class="font-medium dark:text-orange-200">Ford Transit</p>
+            </div>
+            <!-- Car 3 -->
+            <div class="flex-shrink-0 w-[250px] text-center snap-center">
+              <img
+                src="https://www.visitmorocco.com/sites/default/files/thumbnails/image/vm-worldcup-qatar-football-morocco-badr-banoun_1.png"
+                alt="VW Tiguan"
+                class="mx-auto mb-4"
+              />
+              <p class="font-medium dark:text-orange-200">VW Tiguan</p>
+            </div>
+            <!-- Car 4 -->
+            <div class="flex-shrink-0 w-[250px] text-center snap-center">
+              <img
+                src="https://www.visitmorocco.com/sites/default/files/thumbnails/image/vm-worldcup-qatar-football-morocco-badr-banoun_1.png"
+                alt="Skoda Fabia"
+                class="mx-auto mb-4"
+              />
+              <p class="font-medium dark:text-orange-200">Skoda Fabia</p>
+            </div>
+          </div>
+
+          
+
+          <!-- Right Arrow -->
+          <button
+            id="scrollRight"
+            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section id="section5" class="pb-20">
+        <div class="w-full dark:bg-gray-800 h-full xl:px-20 px-10 max-sm:p-5">
+          <div class="w-full bg-sky-200 h-full rounded-4xl p-10 2xl:p-20 max-sm:p-5">
+            <div
+              class="bg-white dark:bg-gray-800 rounded-4xl flex flex-col gap-5 p-10 shadow-right-sky"
+            >
+              <div class="font-medium xl:text-4xl text-3xl dark:text-white">How It Works</div>
+              <div class="flex flex-col gap-2">
+                <div class="dark:text-orange-200">
+                  According to the applicable legislation, you are entitled to a
+                  replacement car for a maximum period established by ASF Norm
+                  no. 20/2017, updated by ASF Norm no. 18/2022, Article 25,
+                  which states: Art. 25: (1) In the event that, as a result of a
+                  risk covered by the RCA insurance contract, the vehicle of the
+                  injured party is damaged, the RCA insurer shall compensate for
+                  the loss of use of the damaged vehicle during the repairs
+                  period, in accordance with the applicable legal provisions. To
+                  benefit from a replacement car, the injured party must present
+                  the following documents:
+                </div>
+                <div>
+                  <div class="font-medium xl:text-xl text-lg dark:text-white">
+                    1. Personal documents
+                  </div>
+                  <div>
+                    <ul class="dark:text-orange-200">
+                      <li>• Identity Card (ID) / Passport – copy</li>
+                      <li>• Driving License – copy</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="font-medium xl:text-xl text-lg dark:text-white">
+                    2. Documents related to the accident and compensation
+                  </div>
+                  <div>
+                    <ul class="dark:text-orange-200">
+                      <li>• Accident report issued by the Police</li>
+                      <li>
+                        • Amicable accident statement, completed and signed by
+                        both parties involved
+                      </li>
+                      <li>
+                        • Proof of damage file registration at the RCA insurer
+                        of the at-fault driver
+                      </li>
+                      <li>• Damage assessment report issued by the insurer</li>
+                      <li>
+                        • Payment acceptance from the RCA insurer to cover the
+                        loss of use of the damaged vehicle
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="font-medium xl:text-xl text-lg dark:text-white">
+                    3. Documents related to the damaged vehicle
+                  </div>
+                  <div>
+                    <ul class="dark:text-orange-200">
+                      <li>
+                        • Vehicle Registration Certificate (logbook) – copy
+                      </li>
+                      <li>
+                        • RCA Insurance Policy of the at-fault driver – copy
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex xl:pt-10 max-sm:flex-col">
+              <div class="w-1/2 p-5 flex flex-col gap-5 max-sm:w-full">
+                <div class="2xl:text-4xl xl:text-2xl text-xl">
+                  When your car takes a break, we keep you going.
+                </div>
+                <div class="2xl:text-4xl xl:text-3xl text-2xl font-bold">
+                  FREE!
+                </div>
+              </div>
+              <div class="w-1/2 p-5 flex flex-col gap-5">
+                <div class="font-medium 2xl:text-4xl xl:text-2xl text-xl">
+                  Contact Us
+                </div>
+                <div class="flex flex-col gap-4">
+                  <div
+                    class="font-medium 2xl:text-2xl bg-black text-white w-fit 2xl:px-20 2xl:py-4 px-10 py-2 rounded-full max-lg:w-fit max-lg:px-[10px]"
+                  >
+                    <span class="border-b max-lg:text-sm"
+                      >@inlocuiremasina@klasswagen.com</span
+                    >
+                  </div>
+                  <div
+                    class="font-medium 2xl:text-2xl bg-black text-white w-fit px-32 py-2 2xl:px-53 2xl:py-4 rounded-full max-lg:w-fit max-lg:px-[30px]"
+                  >
+                    <span class="border-b max-lg:text-sm">0374023333</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section6">
+        <div
+          class="w-full dark:bg-gray-800 h-[600px] sm:flex sm:gap-10 2xl:gap-40 xl:p-20 p-10 max-sm:flex max-sm:flex-col max-sm:gap-[10px] max-sm:p-5"
+        >
+          <div class="sm:w-1/2 flex flex-col gap-5">
+            <div class="font-medium sm:text-5xl text-2xl text-gray-500 dark:text-white">
+              Our Locations
+            </div>
+            <div class="flex flex-col gap-5">
+              <div
+                class="flex sm:flex-col border-gray-300 border-2 py-2 pl-6 lg:w-1/2 rounded-full map-btn"
+              >
+                <div class="sm:text-lg text-sm text-gray-400 whitespace-nowrap dark:dark:text-orange-200">
+                  Pick-up location:*
+                </div>
+                <div class="text-lg text-gray-600 whitespace-nowrap dark:text-orange-200">Select pickup location</div>
+              </div>
+              <div
+                class="bg-blue-500 sm:w-1/2 sm:py-4 py-[4px] text-center text-white sm:text-lg rounded-full hover:bg-blue-400"
+              >
+                Request car
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-1/2 h-[100%] max-sm:h-[100%]">
+            <div class="xl:w-full lg:w-10/12 xl:h-full h-10/12 xl:px-20">
+              <iframe
+                class="w-full h-full border-0 rounded-4xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.265556160201!2d144.95605431567208!3d-37.81720987975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d47f0e00a01%3A0x5045675218cee80!2sMelbourne%20VIC!5e0!3m2!1sen!2sau!4v1629341632800!5m2!1sen!2sau"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section7">
+        <div
+          class="w-full dark:bg-gray-800 h-[700px] flex p-10 gap-10 max-sm:grid max-sm:h-[100%]"
+        >
+          <div class="w-1/3 flex flex-col gap-14 max-sm:w-[100%]">
+            <div class="flex justify-start max-sm:w-[100%]">
+              <img
+                class="h-16"
+                src="https://logowhistle.com/wp-content/uploads/2018/06/Football-Logo-Design-Inspirations-From-Around-The-World-LogoWhistle.jpg"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col gap-5 max-sm:gap-3 max-sm:w-[100%]">
+              <div>
+                <div class="font-medium text-xl text-blue-500 max-sm:text-sm">E-MAIL</div>
+                <div class="text-gray-600 max-sm:text-sm dark:text-orange-200">inlocuiremasina@klasswagen.com</div>
+              </div>
+              <div>
+                <div class="font-medium text-xl text-blue-500 max-sm:text-sm">
+                  PHONE NUMBER
+                </div>
+                <div class="text-gray-600 max-sm:text-sm dark:text-orange-200">0374023333</div>
+              </div>
+              <div>
+                <div class="font-medium text-xl text-blue-500 max-sm:text-sm">WHATSAPP</div>
+                <div class="text-gray-600 max-sm:text-sm dark:text-orange-200">0733909999</div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/3 max-sm:w-[100%]">
+            <ul class="flex flex-col gap-8 2xl:text-2xl text-xl text-gray-500 max-sm:text-sm max-sm:gap-3 dark:text-orange-200">
+              <li class="font-medium text-black dark:text-white">Useful</li>
+              <li>Terms and Conditions</li>
+              <li>Privacy Policy</li>
+              <li>Rent a Car</li>
+            </ul>
+          </div>
+          <div class="w-1/3 max-sm:w-[100%]">
+            <ul class="flex flex-col gap-10 2xl:text-2xl text-xl text-gray-500 max-sm:text-sm max-sm:gap-3 dark:text-orange-200">
+              <li class="font-medium text-black dark:text-white">Romania</li>
+              <li>Bacau</li>
+              <li>Bucharest</li>
+              <li>Timisoara</li>
+              <li>Iasi</li>
+              <li>Cluj-Napoca</li>
+              <li>Craiova</li>
+              <li>Sibiu</li>
+              <li>Suceava</li>
+            </ul>
+          </div>
+          <div class="w-1/3 2xl:text-2xl text-xl flex flex-col gap-10 max-sm:text-sm max-sm:w-[100%] max-sm:gap-3">
+            <div class="font-medium text-black dark:text-white">Comercial data</div>
+            <div class="flex flex-col gap-5 max-sm:gap-3 text-gray-500 dark:text-orange-200">
+              <div>Klass Wagen SRL</div>
+              <div>Timisoara, str. B-dul 16</div>
+              <div>Decembrie 1989, no. 35,</div>
+              <div>county Timis</div>
+              <div>J35/351/2005 RO</div>
+              <div>17197919.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section8">
+        <div
+          class="w-full dark:bg-gray-800 sm:flex justify-between p-16 border-b-2 border-gray-300 max-sm:flex max-sm:flex-col max-sm:gap-5 max-sm:items-center"
+        >
+          <div class="flex gap-5">
+            <img
+              class="h-12 w-12 bg-gray-200 rounded-full px-3 py-2 max-lg:w-[30px] max-lg:h-[30px] max-lg:px-[6px] max-lg:py-[6px]"
+              src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/footer/f0170b67-4840-443c-a331-bb5c060230ea-facebook.svg"
+              alt=""
+            />
+            <img
+              class="h-12 w-12 bg-gray-200 rounded-full px-3 py-2 max-lg:w-[30px] max-lg:h-[30px] max-lg:px-[6px] max-lg:py-[6px]"
+              src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/footer/360d4c56-ff67-40ff-9d8e-5c487ad058a3-instagram.svg"
+              alt=""
+            />
+            <img class="h-12 w-12 bg-gray-200 rounded-full px-3 py-2
+            max-lg:w-[30px] max-lg:h-[30px] max-lg:px-[6px] max-lg:py-[6px]""
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/footer/c480d4e3-1c57-4d99-86df-d79a69473393-tiktok.svg"
+            alt="" /> <img class="h-12 w-12 bg-gray-200 rounded-full px-3 py-2
+            max-lg:w-[30px] max-lg:h-[30px] max-lg:px-[6px] max-lg:py-[6px]""
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/footer/a53e5b67-d353-43e4-b9c3-f61a8633ed44-linkdin.svg"
+            alt="" />
+          </div>
+          <div
+            class="sm:p-10 p-[15px] flex flex-col sm:gap-10 justify-between py-[40px] sm:w-[400px] sm:h-[230px] lg:w-[450px] lg:h-[220px] bg-black rounded-4xl max-sm:gap-[20px]"
+          >
+            <div class="font-medium sm:text-xl text-white">
+              I want to receive offers and news from replacementmasina.com Klass
+              Wagen.
+            </div>
+            <div
+              class="font-medium text-xl text-white bg-blue-500 sm:py-3 rounded-full text-center cursor-pointer hover:bg-blue-400"
+            >
+              Subscribe
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div
+          class="w-full dark:bg-gray-800 flex max-sm:flex-col max-sm:items-center justify-between p-10 items-end max-sm:gap-[10px] max-lg:flex-col max-lg:items-center max-lg:gap-[10px]"
+        >
+          <div class="flex gap-10 text-gray-500">
+            <div>Privacy notice & Legal notice</div>
+            <div>T&C</div>
+          </div>
+          <div
+            class="flex sm:gap-10 max-sm:flex-col max-sm:gap-[10px] max-lg:flex max-lg:gap-10"
+          >
+            <img
+              class="h-14"
+              src="https://logowhistle.com/wp-content/uploads/2018/06/Football-Logo-Design-Inspirations-From-Around-The-World-LogoWhistle.jpg"
+              alt=""
+            />
+            <img
+            class="h-14"
+              src="https://logowhistle.com/wp-content/uploads/2018/06/Football-Logo-Design-Inspirations-From-Around-The-World-LogoWhistle.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text-gray-500">
+            2016-2025 © KlassWagen. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+  </body>
+</html>

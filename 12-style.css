@@ -436,7 +436,9 @@
     color: white;
     font-weight: bold;
 }
-
+body::-webkit-scrollbar{
+    display: none;
+}
 
 /*  media query */
 
