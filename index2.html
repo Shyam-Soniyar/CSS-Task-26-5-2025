@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <section>
+      <nav
+        class="flex justify-between items-center w-full xl:max-w-6xl lg:max-w-5xl max-w-2xl max-xl:container mx-auto bg-white px-3 py-2 rounded-2xl fixed top-8 left-1/2 -translate-x-1/2 z-10 shadow-2xl"
+      >
+        <div class="text-2xl font-bold">
+          <span class="text-red-600">Swift</span
+          ><span class="text-blue-600">Rooter</span>
+        </div>
+        <ul
+          class="flex flex-col lg:flex-row gap-5 text-md font-medium text-gray-700 absolute top-12 max-lg:items-center max-lg:justify-center max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:bg-white lg:static max-lg:w-full max-lg:p-8 max-lg:rounded-b-2xl max-lg:shadow-2xl max-lg:hidden transition-all duration-300 ease-in-out"
+        >
+          <li><a href="#" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#" class="hover:text-blue-500">Services</a></li>
+          <li><a href="#" class="hover:text-blue-500">About Us</a></li>
+          <li>
+            <a href="./index2.html" class="hover:text-blue-500">Contact Us</a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-4">
+          <div id="hamburger-icon" class="lg:hidden text-3xl">
+            <a id="metaMenu" href="#">&#9776;</a>
+          </div>
+          <button
+            class="size-fit flex items-center gap-2 bg-blue-500 text-white rounded-lg px-4 py-2 font-bold text-lg"
+          >
+            <img class="size-6" src="assets/Frame (1).png" alt="" />
+            <span class="hidden lg:block">Get Template</span>
+          </button>
+        </div>
+      </nav>
+    </section>
+    <section
+      class="py-10 max-w-7xl mx-auto mb-10 max-xl:px-10 max-sm:px-5 flex flex-col gap-10"
+      style="padding-top: 200px"
+    >
+      <div
+        class="max-w-lg mx-auto flex flex-col gap-4 items-center text-center"
+      >
+        <div class="bg-gray-100 rounded-xl px-3 py-1 w-fit font-medium">
+          &#9842; Our Testimonials
+        </div>
+        <div class="lg:text-4xl text-3xl font-medium">Contact Us</div>
+      </div>
+      <div class="flex gap-10 lg:flex-row flex-col">
+        <div
+          class="w-full flex flex-col gap-5 max-sm:justify-center max-sm:items-center"
+        >
+          <div class="lg:text-4xl text-3xl font-medium">
+            Get in Touch with Us
+          </div>
+          <div class="sm:text-xl font-medium text-gray-500">
+            Reach out to us for inquiries, support, or partnership
+            opportunities. We're here to assist you!
+          </div>
+          <div class="flex flex-col gap-5">
+            <div
+              class="flex justify-between border border-gray-200 shadow px-6 py-3 rounded-2xl"
+            >
+              <div class="flex gap-3 items-center">
+                <div class="p-2 bg-gray-100 rounded-lg border border-gray-200">
+                  &#9783;
+                </div>
+                <div class="font-medium sm:text-xl">hello@swiftrooter.com</div>
+              </div>
+              <div
+                class="bg-gray-100 px-3 py-2 w-fit font-medium rounded-lg border border-gray-200 text-gray-500"
+              >
+                Message
+              </div>
+            </div>
+            <div
+              class="flex justify-between border border-gray-200 shadow px-6 py-3 rounded-2xl"
+            >
+              <div class="flex gap-3 items-center">
+                <div class="p-2 bg-gray-100 rounded-lg border border-gray-200">
+                  &#9783;
+                </div>
+                <div class="font-medium sm:text-xl">hello@swiftrooter.com</div>
+              </div>
+              <div
+                class="bg-gray-100 px-3 py-2 w-fit font-medium rounded-lg border border-gray-200 text-gray-500"
+              >
+                Message
+              </div>
+            </div>
+            <div
+              class="flex justify-between border border-gray-200 shadow px-6 py-3 rounded-2xl"
+            >
+              <div class="flex gap-3 items-center">
+                <div class="p-2 bg-gray-100 rounded-lg border border-gray-200">
+                  &#9783;
+                </div>
+                <div class="font-medium sm:text-xl">hello@swiftrooter.com</div>
+              </div>
+              <div
+                class="bg-gray-100 px-3 py-2 w-fit font-medium rounded-lg border border-gray-200 text-gray-500"
+              >
+                Message
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="w-full flex flex-col gap-5" novalidate>
+          <div class="flex flex-col gap-4">
+            <div class="text-2xl font-medium">Send Us a Message</div>
+            <div class="text-lg font-medium text-gray-500">
+              Use our convenient contact form to reach out with questions,
+              feedback, or collaboration inquiries.
+            </div>
+          </div>
+
+          <!-- Name Field -->
+          <input
+            name="name"
+            type="text"
+            required
+            placeholder="Name"
+            class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 invalid:border-red-500 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+          />
+
+          <!-- Email Field -->
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="Email"
+            class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 invalid:border-red-500 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+          />
+
+          <!-- Message Field -->
+          <textarea
+            name="message"
+            required
+            minlength="5"
+            placeholder="Message"
+            rows="3"
+            class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 invalid:border-red-500 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+          ></textarea>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="flex items-center justify-center gap-2 bg-black text-white rounded-lg px-4 py-2 text-lg font-medium w-full"
+          >
+            <span class="text-white">&#9988;</span>
+            <span>Submit</span>
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="py-10 max-w-7xl mx-auto mb-10 max-xl:px-10 max-sm:px-5">
+        <div class="flex lg:flex-row flex-col gap-10">
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-5 max-lg:text-center">
+              <div class="bg-gray-100 rounded-xl px-3 py-1 w-fit font-medium max-lg:mx-auto">
+                &#9842; Questions & Answers
+              </div>
+              <div class="lg:text-4xl text-3xl font-medium">Frequently Asked Questions</div>
+            </div>
+            <div class="max-lg:mx-auto">
+                <img class="lg:w-180" src="assets/Image Box.png" alt="">
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-5">
+            <div class="flex flex-col gap-5">
+                <div class="border rounded-2xl overflow-hidden border-gray-200">
+                    <button type="button" class="collapsible active:bg-gray-200 bg-gray-100  cursor-pointer p-4 w-full text-left outline-none border-b border-gray-200 text-xl font-medium">Open Section 1</button>
+                <div class="px-4 hidden overflow-hidden">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                </div>
+                <div class="border rounded-2xl overflow-hidden border-gray-200">
+                    <button type="button" class="collapsible active:bg-gray-200 bg-gray-100  cursor-pointer p-4 w-full text-left outline-none border-b border-gray-200 text-xl font-medium">Open Section 1</button>
+                <div class="px-4 hidden overflow-hidden">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                </div>
+                <div class="border rounded-2xl overflow-hidden border-gray-200">
+                    <button type="button" class="collapsible active:bg-gray-200 bg-gray-100  cursor-pointer p-4 w-full text-left outline-none border-b border-gray-200 text-xl font-medium">Open Section 1</button>
+                <div class="px-4 hidden overflow-hidden">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                </div>
+                <div class="border rounded-2xl overflow-hidden border-gray-200">
+                    <button type="button" class="collapsible active:bg-gray-200 bg-gray-100  cursor-pointer p-4 w-full text-left outline-none border-b border-gray-200 text-xl font-medium">Open Section 1</button>
+                <div class="px-4 hidden overflow-hidden">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                </div>
+                <div class="border rounded-2xl overflow-hidden border-gray-200">
+                    <button type="button" class="collapsible active:bg-gray-200 bg-gray-100  cursor-pointer p-4 w-full text-left outline-none border-b border-gray-200 text-xl font-medium">Open Section 1</button>
+                <div class="px-4 hidden overflow-hidden">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                </div>
+                
+            </div>
+            <div class="bg-black text-white p-10 rounded-2xl flex flex-col gap-3 items-center">
+                <div class="text-3xl">Need More Help?</div>
+                <div class="text-lg"> Contact us for support, inquiries, or partnerships—we’re happy to assist!</div>
+                <div class="bg-blue-500 text-white px-3 py-1 w-fit font-medium rounded-lg">&#9743; Contact Us</div>
+            </div>
+           
+          </div>
+      </section>
+    <section class="py-10 max-w-7xl mx-auto mb-10 flex flex-col gap-12 max-xl:px-10 max-sm:px-5">
+        <div class="flex xl:flex-row gap-10 flex-col justify-between">
+            <div class="flex flex-col gap-3">
+                <div class="text-2xl font-bold"><span class="text-red-600">Swift</span><span class="text-blue-500">Rooter</span></div>
+                <div class="text-lg text-gray-500 font-medium">Fast, reliable & professional 24/7 plumbing & rooter services.</div>
+            </div>
+            <div class="flex lg:flex-row flex-col  gap-20">
+                <div class="flex flex-col gap-5">
+                    <div class="text-xl font-medium">Explore</div>
+                    <ul class="flex flex-col gap-2 text-gray-800 text-md font-medium">
+                        <li>Home</li>
+                        <li>Location</li>
+                        <li>Services</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="text-xl font-medium">Company</div>
+                    <ul class="flex flex-col gap-2 text-gray-800 text-md font-medium">
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-5 w-full">
+                    <div class="text-xl font-medium">Get in Touch</div>
+                    <div class="size-8 xl:w-full flex gap-4">
+                        <img class="size-full" src="assets/instagram.png" alt="">
+                        <img class="size-full" src="assets/facebook.png" alt="">
+                        <img class="size-full" src="assets/linkedin.png" alt="">
+                        <img class="size-full" src="assets/whatsapp.png" alt="">
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="flex xl:flex-row flex-col justify-between gap-10">
+            <div class="flex flex-col max-lg:items-center gap-10">
+                <div class="flex flex-col max-lg:items-center gap-6">
+                    <div class="lg:text-6xl text-4xl font-bold">Get in Touch!</div>
+                    <div class="sm:text-lg text-gray-500 font-medium">have questions or need assistance? We’re here to help!</div>
+                </div>
+                <div class="flex gap-2">
+                    <input type="text" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block xl:w-full p-2.5" placeholder="Your email address">
+                    <button class="bg-blue-500 text-white p-2 rounded-lg">Subscribe</button>
+                </div>
+            </div>
+            <div class="flex flex-col text-lg gap-10 w-fit">
+                <div class="flex lg:flex-row flex-col gap-10">
+                  <div>
+                    <div class="font-medium">Address</div>
+                    <div>1901 Thornridge Cir. Shiloh, Hawaii 81063</div>
+                </div>
+                <div>
+                    <div class="font-medium">Phone</div>
+                    <div>+1 [303] 873-2983</div>
+                </div>
+                </div>
+                <div class="flex lg:flex-row flex-col gap-10">
+                  <div>
+                    <div class="font-medium">Address</div>
+                    <div>1901 Thornridge Cir. Shiloh, Hawaii 81063</div>
+                </div>
+                <div>
+                    <div class="font-medium">Email</div>
+                    <div>hallo.test@gmail.com</div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        
+      </section>
+      <footer class="max-w-7xl mx-auto border-t border-gray-200 max-xl:px-10 max-sm:px-5">
+        <div class="text-center p-5 text-xl font-medium text-gray-600">
+          <span class="text-gray-400 max-lg:flex max-lg:justify-center">
+            Build by</span> 
+          <span>Framer Geeks, a part of Saeculum Solutions.</span>
+        </div>
+      </footer>
+  </body>
+</html>
